@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./sweetAlertMin.js"></script>
+</head>
+<body>
+    
+    <buttopn onclick="first()">
+        click here
+    </button>
+
+    
+
+    <script>
+
+        function first(){
+            // alerte de confirrmation d'insertion dans la base de donnees
+        swal("insertion reussite", "clique pour continuer", "success")
+
+            // deuxieme facon 
+
+        //  swal({
+        //     title: "insertion reussite",
+        //     text : "ciqquer pour continuer ",
+        //     icon : "success",
+        //     button : "i''m ok"
+        //  })
+
+        // suppression dans la base de donnees
+
+        swal({
+            title : "Etes-vous sur?",
+            text : "une  fois supprimé , vous ne pourrez plus récupéré ce fichier imaginaire ",
+            icon : "warning",
+            buttons: true,
+            dangerMode : true
+        })
+        .then ((willDelete)=>{
+            if(willDelete){
+
+                swal("votre fichier imaginaire a ete supprime" , {icon : "success"})
+
+            }
+            else{
+                swal("votre fichier  est en securite ")
+            }
+        })
+
+        }
+    </script>
+</body>
+</html>
